@@ -1,0 +1,140 @@
+{
+  "manuscript": {
+    "title": "NextShot: Learning Source-Grounded Structured Composition Targets for Portrait Photography",
+    "manuscript_sha256": "d8d51900af2b6ef442d8fa4747b9af1feeaa7e2de91f7e6393182e21efad181b",
+    "kind": "transcription_of_paper_tables",
+    "recomputed": false
+  },
+  "code_sources": [
+    {
+      "destination": "nextshot/__init__.py",
+      "source_sha256": "91d187ae6e208fa4f277112940522862f0ec361997a7b6f7435da01e246b011e",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/aes_core.py",
+      "source_sha256": "bc3e57f6d09bcd79b50b55e33638b17ed81057023bee8f806163c7bc09597ad9",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/auxiliary.py",
+      "source_sha256": "2d525314078bdbe1c9ed6355dbf6fde3afb40386381116681c2ceaf123aac613",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/backbone.py",
+      "source_sha256": "3270f0b1e85d0d820e13e5f1dcf2c5261d5fb0429d90a20eeddb80ed1d1411b2",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/config.py",
+      "source_sha256": "2d07d332d0b5eb4d129d3f268e454e769081adda489aa68e487df21ded1285d2",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/constants.py",
+      "source_sha256": "b542be64423849dbe3669dd3aa222411736ae2956233893e4acb33853c43cee3",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/decoder.py",
+      "source_sha256": "64d43f8f697fcd2e1453c388f5404facb87417bd3e28fed84c1dd9555987ada0",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/framing.py",
+      "source_sha256": "96fae19022323f2ae73c4c4d494cc020930bb506a1cbf1c26091de1db6561365",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/geometry_loss.py",
+      "source_sha256": "e8132f6c1a4feae743c49e52ff003aaed27dfba3671dcfad79c86b798bb8fe41",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/losses.py",
+      "source_sha256": "1ce540068750213664dcf735c25b8882540f1fc37357d13de4cfab3be0c4a2de",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/model.py",
+      "source_sha256": "05944ee3437169d2ce9a8cf415c2a6e7f9dffdfdab502f37b8d0b9b252973859",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/online.py",
+      "source_sha256": "74db756ad2382be82d1dccce1a5104f24632f9dbd4e6bb19bcb6005695764928",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/runtime.py",
+      "source_sha256": "a7900bfbdb9990cb5214cb44f2e343fb33dbeb566e8da6a626c53dbd1bd67d1d",
+      "change": "unchanged"
+    },
+    {
+      "destination": "nextshot/source.py",
+      "source_sha256": "ffa0a420b62ec5dee5e831a9a82127de54adbb13c3e27b05841b8912be648504",
+      "change": "unchanged"
+    },
+    {
+      "destination": "tests/test_core.py",
+      "source_sha256": "fd9fabd40af021f512b68b15c2e634e4ed78559521281f804dfac8e14b91f62f",
+      "change": "unchanged"
+    },
+    {
+      "destination": "docs/MODEL_IO.md",
+      "source_sha256": "d8188cdc477b9694a68f41a4f1340e79e81b4220a171726eda7f6204eec0b787",
+      "change": "unchanged"
+    },
+    {
+      "destination": "data_processing/matching.py",
+      "source_sha256": "24928486129d9e85afeb5422c7650e3502d83ac5268178a8558a6883132ab22c",
+      "change": "relative imports only"
+    },
+    {
+      "destination": "data_processing/semantics.py",
+      "source_sha256": "f7180ce3bb8cca3fd1636074ec20299f324ce97f56df512378c91f8732b4beaf",
+      "change": "unchanged"
+    },
+    {
+      "destination": "data_processing/ids.py",
+      "source_sha256": "996078b9dbaa347ed5ff4e4e3a1a973133e67c40b39e994073f4e0b076fdd1fc",
+      "change": "extract unchanged definitions",
+      "definitions": [
+        "make_match_id"
+      ]
+    },
+    {
+      "destination": "data_processing/regions.py",
+      "source_sha256": "c0433d63111739ee2790cbc2b000461f5a4ba0847cd77a6c3ef237be0cf65c47",
+      "change": "extract unchanged definitions",
+      "definitions": [
+        "FeatureConfig",
+        "crop_box",
+        "letterbox"
+      ]
+    },
+    {
+      "destination": "tests/test_matching.py",
+      "source_sha256": "73d6d11214c6ca9ca5261e3dea0284f66787c35e712532244da5387797283ae1",
+      "change": "package imports only; same eight checks"
+    }
+  ],
+  "figures": [
+    {
+      "paper_figure": 2,
+      "source_pdf_sha256": "bb9d5c268ddf94eb0d31066e3d3588b7f9ec833ef555b9919383d2ef7573ac08",
+      "asset": "assets/supervision.png",
+      "asset_sha256": "75ce298d221e9d8f037a1aa9d8619fd610a614522878805618ae2fdd48a8ce1c",
+      "transformation": "Poppler PNG rasterization, longest edge 2200 pixels; no image content edits"
+    },
+    {
+      "paper_figure": 3,
+      "source_pdf_sha256": "ed5405c0f40741a137c64f3d22590e2c3278ce1e34e9498d636f7c3d9891ba8d",
+      "asset": "assets/architecture.png",
+      "asset_sha256": "555fcc8c838da0ed0310f3ea7aba631fabbb16ac7308b6d8b4439a844c00619b",
+      "transformation": "Poppler PNG rasterization, longest edge 2200 pixels; no image content edits"
+    }
+  ],
+  "configuration": "Architecture fields selected from the existing main 4B configuration; local model path replaced, trainer/data identifiers omitted."
+}

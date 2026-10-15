@@ -1,0 +1,5 @@
+# Core algorithm checks. Transformers and pretrained weights are not needed.
+torch>=2.8,<3
+numpy>=1.26,<3
+scipy>=1.11,<2
+Pillow>=10

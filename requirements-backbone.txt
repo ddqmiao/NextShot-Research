@@ -1,0 +1,8 @@
+# Recorded main-experiment versions; not a new GPU validation of this release.
+# Install the appropriate PyTorch CUDA wheel for your platform separately.
+torch==2.11.0
+transformers==5.9.0
+numpy==2.2.6
+Pillow>=10
+safetensors>=0.4
+scipy>=1.11,<2

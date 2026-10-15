@@ -1,0 +1,286 @@
+{
+  "source": {
+    "title": "NextShot: Learning Source-Grounded Structured Composition Targets for Portrait Photography",
+    "manuscript_sha256": "d8d51900af2b6ef442d8fa4747b9af1feeaa7e2de91f7e6393182e21efad181b",
+    "kind": "transcription_of_paper_tables",
+    "recomputed": false
+  },
+  "table1": {
+    "reference_sources": 781,
+    "preference_sources": 200,
+    "preference_direction": "NextShot over each row method",
+    "rows": [
+      {
+        "method": "NoChange",
+        "box_iou_all": 0.5639,
+        "box_iou_person": 0.4914,
+        "box_iou_environment": 0.6079,
+        "centroid_mae": 0.0745,
+        "visible_area_mae": 0.0781,
+        "frame_relative_error_percent": 9.848,
+        "nextshot_over_row_qwen_percent": 89.5,
+        "nextshot_over_row_flash_percent": 77.0
+      },
+      {
+        "method": "AR-8B",
+        "box_iou_all": null,
+        "box_iou_person": null,
+        "box_iou_environment": null,
+        "centroid_mae": 0.068,
+        "visible_area_mae": 0.0727,
+        "frame_relative_error_percent": null,
+        "nextshot_over_row_qwen_percent": 79.5,
+        "nextshot_over_row_flash_percent": 81.0
+      },
+      {
+        "method": "NoVLM-AttrAux",
+        "box_iou_all": 0.6319,
+        "box_iou_person": 0.5902,
+        "box_iou_environment": 0.6571,
+        "centroid_mae": 0.0677,
+        "visible_area_mae": 0.0675,
+        "frame_relative_error_percent": 3.937,
+        "nextshot_over_row_qwen_percent": 45.0,
+        "nextshot_over_row_flash_percent": 72.5
+      },
+      {
+        "method": "w/o AesAux",
+        "box_iou_all": 0.6384,
+        "box_iou_person": 0.6025,
+        "box_iou_environment": 0.6632,
+        "centroid_mae": 0.066,
+        "visible_area_mae": 0.0666,
+        "frame_relative_error_percent": 3.747,
+        "nextshot_over_row_qwen_percent": 75.5,
+        "nextshot_over_row_flash_percent": 84.5
+      },
+      {
+        "method": "w/o RelBias",
+        "box_iou_all": 0.6358,
+        "box_iou_person": 0.5975,
+        "box_iou_environment": 0.6611,
+        "centroid_mae": 0.0664,
+        "visible_area_mae": 0.0678,
+        "frame_relative_error_percent": 3.74,
+        "nextshot_over_row_qwen_percent": 79.5,
+        "nextshot_over_row_flash_percent": 79.5
+      },
+      {
+        "method": "w/o Framing Conditioning",
+        "box_iou_all": 0.6307,
+        "box_iou_person": 0.5972,
+        "box_iou_environment": 0.6519,
+        "centroid_mae": 0.0672,
+        "visible_area_mae": 0.0653,
+        "frame_relative_error_percent": 3.46,
+        "nextshot_over_row_qwen_percent": 73.0,
+        "nextshot_over_row_flash_percent": 66.5
+      },
+      {
+        "method": "NextShot",
+        "box_iou_all": 0.6373,
+        "box_iou_person": 0.5973,
+        "box_iou_environment": 0.663,
+        "centroid_mae": 0.0659,
+        "visible_area_mae": 0.067,
+        "frame_relative_error_percent": 4.068,
+        "nextshot_over_row_qwen_percent": null,
+        "nextshot_over_row_flash_percent": null
+      }
+    ]
+  },
+  "table2": {
+    "qwen_sources": 200,
+    "flash_sources": 100,
+    "preference_direction": "A over B",
+    "rows": [
+      {
+        "A": "NextShot",
+        "B": "w/o AesAux",
+        "qwen_percent": 75.5,
+        "flash_percent": 86.0
+      },
+      {
+        "A": "NoVLM-AttrAux",
+        "B": "NoVLM-Paired",
+        "qwen_percent": 78.5,
+        "flash_percent": 72.0
+      },
+      {
+        "A": "w/o AesAux",
+        "B": "NoVLM-Paired",
+        "qwen_percent": 43.0,
+        "flash_percent": 61.0
+      },
+      {
+        "A": "NextShot",
+        "B": "NoVLM-Paired",
+        "qwen_percent": 78.0,
+        "flash_percent": 78.0
+      },
+      {
+        "A": "NextShot",
+        "B": "AR-8B",
+        "qwen_percent": 84.5,
+        "flash_percent": 76.0
+      },
+      {
+        "A": "NextShot",
+        "B": "ZS-32B",
+        "qwen_percent": 83.0,
+        "flash_percent": 69.0
+      }
+    ]
+  },
+  "table3": {
+    "photograph_pairs": 100,
+    "evaluators": 5,
+    "target_preferences": [
+      {
+        "A": "NextShot",
+        "B": "NoVLM-Paired",
+        "qwen_percent": 68.0,
+        "flash_percent": 72.0
+      },
+      {
+        "A": "NextShot",
+        "B": "w/o RelBias",
+        "qwen_percent": 67.0,
+        "flash_percent": 86.0
+      },
+      {
+        "A": "NoVLM-Paired",
+        "B": "NoChange",
+        "qwen_percent": 100.0,
+        "flash_percent": 91.0
+      },
+      {
+        "A": "w/o RelBias",
+        "B": "NoChange",
+        "qwen_percent": 97.0,
+        "flash_percent": 94.0
+      }
+    ],
+    "human_judgments": {
+      "n": 500,
+      "guided": 390,
+      "initial": 36,
+      "no_preference": 74,
+      "guided_percent": 78.0
+    },
+    "pair_majority": {
+      "n": 100,
+      "guided": 89,
+      "initial": 0,
+      "no_majority": 11,
+      "guided_percent": 89.0
+    },
+    "photograph_model_preferences": {
+      "qwen_percent": 83.0,
+      "flash_percent": 90.0
+    }
+  },
+  "table14": {
+    "service_protocol": {
+      "sources": 50,
+      "warmup_sources": 3,
+      "gpu": "one A800",
+      "batch_size": 1,
+      "input": "prepared regional input",
+      "excluded": [
+        "upstream region perception",
+        "feature extraction",
+        "model loading",
+        "guidance rendering"
+      ]
+    },
+    "service_rows": [
+      {
+        "method": "NoVLM-Paired",
+        "median_seconds": 0.087,
+        "p95_seconds": 0.124,
+        "forward_seconds": 0.009,
+        "peak_allocated_gib": 0.051
+      },
+      {
+        "method": "NoVLM-AttrAux",
+        "median_seconds": 0.059,
+        "p95_seconds": 0.08,
+        "forward_seconds": 0.009,
+        "peak_allocated_gib": 0.051
+      },
+      {
+        "method": "w/o AesAux",
+        "median_seconds": 0.206,
+        "p95_seconds": 0.306,
+        "forward_seconds": 0.144,
+        "peak_allocated_gib": 8.729
+      },
+      {
+        "method": "NextShot",
+        "median_seconds": 0.206,
+        "p95_seconds": 0.268,
+        "forward_seconds": 0.144,
+        "peak_allocated_gib": 8.729
+      },
+      {
+        "method": "NextShot-8B",
+        "median_seconds": 0.235,
+        "p95_seconds": 0.31,
+        "forward_seconds": 0.167,
+        "peak_allocated_gib": 15.692
+      },
+      {
+        "method": "AR-8B",
+        "median_seconds": 16.522,
+        "p95_seconds": 26.073,
+        "forward_seconds": 16.455,
+        "peak_allocated_gib": 19.506
+      }
+    ],
+    "training_rows": [
+      {
+        "method": "NoVLM-Paired",
+        "trainable_million": 4.833,
+        "gpus": 1,
+        "peak_gib_per_gpu": 0.43,
+        "gpu_hours": 0.028
+      },
+      {
+        "method": "NoVLM-AttrAux",
+        "trainable_million": 4.835,
+        "gpus": 1,
+        "peak_gib_per_gpu": 2.4,
+        "gpu_hours": 0.042
+      },
+      {
+        "method": "w/o AesAux",
+        "trainable_million": 15.924,
+        "gpus": 2,
+        "peak_gib_per_gpu": 27.99,
+        "gpu_hours": 1.886
+      },
+      {
+        "method": "NextShot",
+        "trainable_million": 15.949,
+        "gpus": 2,
+        "peak_gib_per_gpu": 43.71,
+        "gpu_hours": 4.66
+      },
+      {
+        "method": "NextShot-8B",
+        "trainable_million": 28.265,
+        "gpus": 2,
+        "peak_gib_per_gpu": 43.03,
+        "gpu_hours": 6.049
+      },
+      {
+        "method": "AR-8B",
+        "trainable_million": 3.834,
+        "gpus": 2,
+        "peak_gib_per_gpu": 54.56,
+        "gpu_hours": 19.225
+      }
+    ]
+  }
+}
